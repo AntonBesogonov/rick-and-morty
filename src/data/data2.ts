@@ -1,0 +1,28 @@
+export const personage = [
+   {
+      _id: 14,
+      films: ['The Computer Wore Tennis Shoes', "Now You See Him, Now You Don't", 'The Strongest Man in the World'],
+      shortFilms: [],
+      tvShows: [],
+      videoGames: [],
+      parkAttractions: [],
+      allies: [],
+      enemies: [],
+      name: 'A.J. Arno',
+      imageUrl: 'https://static.wikia.nocookie.net/disney/images/2/2c/A.J._Arno.jpg',
+      url: 'https://api.disneyapi.dev/characters/14',
+   },
+   {
+      _id: 6,
+      films: [],
+      shortFilms: [],
+      tvShows: [],
+      videoGames: [],
+      parkAttractions: [],
+      allies: [],
+      enemies: [],
+      name: "'Olu Mel",
+      imageUrl: 'https://static.wikia.nocookie.net/disney/images/6/61/Olu_main.png',
+      url: 'https://api.disneyapi.dev/characters/6',
+   },
+];

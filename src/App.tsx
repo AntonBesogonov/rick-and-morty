@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { MainPage } from './pages/MainPage';
+//import { personage } from './data/data2';
+import { useEffect, useState } from 'react';
+import { IPersonage } from './models/models';
+import axios from 'axios';
+import { isPropertySignature } from 'typescript';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   let [personage, setPersonages] = useState<IPersonage[]>([]);
+
+   async function fetchPersonage() {
+      const response = await axios.get('https://rickandmortyapi.com/api/character');
+      setPersonages(response.data.results);
+      
+   }
+
+   useEffect(() => {
+      fetchPersonage();
+   }, []);
+
+   return (
+      <div>
+         {personage.map((personage) => (
+            <MainPage personage={personage} key={personage.id} />
+         ))}
+      </div>
+   );
 }
 
 export default App;

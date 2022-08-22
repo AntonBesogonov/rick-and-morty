@@ -14,7 +14,6 @@ export function usePersonage() {
             setLoading(true);
             const response = await axios.get('https://rickandmortyapi.com/api/character');
             setPersonages(response.data.results);
-            console.log(response.data.results);
             setLoading(false);
          }
       } catch (e: unknown) {

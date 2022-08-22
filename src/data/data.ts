@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-
 import axios, { AxiosError } from 'axios';
 import { IPersonage } from '../models/models';
 
@@ -10,12 +9,14 @@ export function usePersonage() {
 
    async function fetchPersonage() {
       try {
-         setError('');
-         setLoading(true);
-         const response = await axios.get('https://rickandmortyapi.com/api/character');
-         setPersonages(response.data.results);
-         console.log(response.data);
-         setLoading(false);
+         {
+            setError('');
+            setLoading(true);
+            const response = await axios.get('https://rickandmortyapi.com/api/character');
+            setPersonages(response.data.results);
+            console.log(response.data.results);
+            setLoading(false);
+         }
       } catch (e: unknown) {
          const error = e as AxiosError;
          setLoading(false);

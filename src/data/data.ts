@@ -4,7 +4,7 @@ import axios, { AxiosError } from 'axios';
 import { IPersonage } from '../models/models';
 
 export function usePersonage() {
-   let [personage, setPersonages] = useState<IPersonage[]>([]);
+   const [personage, setPersonages] = useState<IPersonage[]>([]);
    const [loading, setLoading] = useState(false);
    const [error, setError] = useState('');
 
@@ -14,6 +14,7 @@ export function usePersonage() {
          setLoading(true);
          const response = await axios.get('https://rickandmortyapi.com/api/character');
          setPersonages(response.data.results);
+         console.log(response.data);
          setLoading(false);
       } catch (e: unknown) {
          const error = e as AxiosError;

@@ -1,23 +1,19 @@
-
+import { Route, Routes } from 'react-router-dom';
 import { MainPage } from './pages/MainPage';
-
-
-import { Loader } from './components/Loader';
-import { Error } from './components/Error';
-import { usePersonage } from './data/data';
+import { Support } from './pages/Support';
+import { Navigation } from './components/Navigation';
+import { Documentation } from './pages/Documentation';
 
 function App() {
-   const { loading, error, personage } = usePersonage();
-
    return (
-      <div>
-         {loading && <Loader />}
-         {error && <Error />}
-         {personage.map((personage) => (
-            <MainPage personage={personage} key={personage.id} />
-         ))}
-      </div>
+      <>
+         <Navigation />
+         <Routes>
+            <Route path='/' element={<MainPage />} />
+            <Route path='/support' element={<Support />} />
+            <Route path='/documentation' element={<Documentation />} />
+         </Routes>
+      </>
    );
 }
-
 export default App;

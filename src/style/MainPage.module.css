@@ -1,10 +1,86 @@
 .element {
+ width: 600px;
+ height: 280px;
  display: flex;
- flex: 0 1 50%;
+ overflow: hidden;
+ background: rgb(60, 62, 68);
+ border-radius: 0.5rem;
+ margin: 0.75rem;
+ box-shadow: rgb(0 0 0 / 10%) 0px 4px 6px -1px, rgb(0 0 0 / 6%) 0px 2px 4px -1px;
+
+
+}
+
+p {
+ margin: 0;
+}
+
+/* .lastLocation {
+ flex: 1 1 0%;
+ display: flex;
+ flex-direction: column;
+ -webkit-box-pack: center;
  justify-content: center;
+} */
+
+/* .from {
+ flex: 1 1 0%;
+ display: flex;
+ flex-direction: column;
+} */
+
+.photo {
+ flex: 2 1 0%;
+ width: 100%;
+
+}
+
+.data {
+ flex: 3 1 0%;
+ position: relative;
+ padding: 0.75rem;
+ color: rgb(255, 255, 255);
+ display: flex;
+ flex-direction: column;
+
 }
 
 img {
- width: 250px;
- height: 250px;
+ width: 100%;
+ height: 100%;
+ margin: 0px;
+ opacity: 1;
+ transition: opacity 0.5s ease 0s;
+ object-position: center center;
+ object-fit: cover;
+ 
+}
+
+.name {
+ font-weight: bold;
+ font-size: calc(26px + 8 * ((100vw - 375px) / (1920 - 375)));
+}
+
+.lastLocation,
+.from {
+ padding-bottom: 15px;
+ font-size: calc(20px + 1 * ((100vw - 375px) / (1920 - 375)));
+}
+
+.nameStatus {
+ padding-bottom: 15px;
+
+}
+
+
+
+.location {
+ color: rgb(158, 158, 158);
+}
+
+@media (max-width: 650px) {
+ .element {
+  height: auto;
+  flex-direction: column;
+ }
 }

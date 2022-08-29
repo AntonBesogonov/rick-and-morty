@@ -8,21 +8,33 @@ interface PersonageProps {
 export function MainPage({ personage }: PersonageProps) {
    return (
       <div className={style.element}>
-         <div>{<img src={personage.image} alt={personage.name}></img>}</div>
-         <div>
-            <div>{<p>{personage.name} </p>}</div>
-            <div>{<p>{personage.gender} </p>}</div>
-            <div>{<p>{personage.type} </p>}</div>
-            <div>{<p>в каком эпизоде видел впервые </p>}</div>
-            <div>{<p>{personage.origin?.name} </p>}</div>
-            <div>
+         <div className={style.photo}>{<img src={personage.image} alt={personage.name}></img>}</div>
+         <div className={style.data}>
+            <div className={style.nameStatus}>
                {
-                  <p>
-                     {personage.status} - {personage.species}
+                  <p className={style.name}>
+                     {personage.name}{' '}
+                     
                   </p>
                }
+               <div className={style.status}>
+               {
+                        <p>
+                           {personage.status} - {personage.species}
+                        </p>
+                     }{' '}
+               </div>
             </div>
-            <div>{<p>Last known location:{personage.location?.name} </p>}</div>
+
+            <div className={style.lastLocation}>
+               {<p className={style.location}>Last known location:</p>}
+               {<p>{personage.location?.name}</p>}
+            </div>
+
+            <div className={style.from}>
+               {<p className={style.location}>From:</p>}
+               {<p>{personage.origin?.name} </p>}
+            </div>
          </div>
       </div>
    );

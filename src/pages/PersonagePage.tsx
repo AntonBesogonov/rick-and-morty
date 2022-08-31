@@ -12,11 +12,15 @@ export function PersonagePage() {
          {loading && <Loader />}
          {error && <Error />}
 
-         <div className={style.wrapper}>
-            {personage.map((personage) => (
-               <MainPage personage={personage} key={personage.id} />
-            ))}
-         </div>
+         {
+            <div className={style.wrapper}>
+               {personage.map((personage) => (
+                  <MainPage personage={personage} key={personage.id} />
+               ))}
+            </div>
+         }
       </div>
    );
 }
+
+export default PersonagePage;

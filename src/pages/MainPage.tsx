@@ -7,6 +7,7 @@ interface PersonageProps {
 
 export function MainPage({ personage }: PersonageProps) {
    return (
+      
       <div className={style.element}>
          <div className={style.photo}>{<img src={personage.image} alt={personage.name}></img>}</div>
          <div className={style.data}>
@@ -36,6 +37,7 @@ export function MainPage({ personage }: PersonageProps) {
                {<p>{personage.origin?.name} </p>}
             </div>
          </div>
+         
       </div>
    );
 }

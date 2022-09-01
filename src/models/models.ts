@@ -1,4 +1,5 @@
 export interface IPersonage {
+   
    id?: 1;
    name?: string;
    status?: string;
@@ -18,4 +19,3 @@ export interface IPersonage {
    url?: string;
    created?: string;
 }
-

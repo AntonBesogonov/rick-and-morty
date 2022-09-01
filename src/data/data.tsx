@@ -16,7 +16,7 @@ export function usePersonage() {
          {
             setError('');
             setLoading(true);
-            const response = await axios.get(`https://rickandmortyapi.com/api/character/?page=${currentPage}`);
+            const response = await axios.get(`https://rickandmortyapi.com/api/character?page=${currentPage}`);
             setPersonages(response.data.results);
             const totalPage = Math.ceil(Number(response.data.info.count) / 20);
             setPageCount(totalPage);

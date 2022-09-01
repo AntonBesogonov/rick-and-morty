@@ -1,0 +1,25 @@
+.pogination {
+ list-style: none;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-size: 1.2rem;
+ gap: 10px;
+}
+
+.page-num {
+ padding: 8px 15px;
+ cursor: pointer;
+ border-radius: 3px;
+ font-weight: 400;
+}
+
+.page-num:hover {
+ background-color: rgb(60, 62, 68);
+ color: white;
+}
+
+.active {
+ background-color: rgb(60, 62, 68);
+ color: white;
+}

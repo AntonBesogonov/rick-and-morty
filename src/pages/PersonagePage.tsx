@@ -22,6 +22,7 @@ export function PersonagePage() {
                ))}
             </div>
          }
+         
       </div>
    );
 }

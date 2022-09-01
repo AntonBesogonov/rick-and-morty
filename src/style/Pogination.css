@@ -5,6 +5,10 @@
  align-items: center;
  font-size: 1.2rem;
  gap: 10px;
+ background-color: rgb(60, 62, 68);
+ color: white;
+ margin: 0;
+ padding: 15px;
 }
 
 .page-num {
@@ -15,11 +19,11 @@
 }
 
 .page-num:hover {
- background-color: rgb(60, 62, 68);
- color: white;
+ background-color: rgb(255, 255, 255);
+ color: rgb(60, 62, 68);
 }
 
 .active {
- background-color: rgb(60, 62, 68);
- color: white;
+ background-color: rgb(255, 255, 255);
+ color: rgb(60, 62, 68);
 }

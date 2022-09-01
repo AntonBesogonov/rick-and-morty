@@ -1,14 +1,13 @@
+//пагинация работает, в данном коммите этот файл не подключен, вместо него PersonagePage.tsx
+
 import { useEffect, useState } from 'react';
 import axios, { AxiosError } from 'axios';
 import { IPersonage } from '../models/models';
-import counter from '../pages/PersonagePage';
 
 export function usePersonage() {
    const [personage, setPersonages] = useState<IPersonage[]>([]);
-
    const [loading, setLoading] = useState(false);
-   const [error, setError] = useState('');
-   
+   const [error, setError] = useState('');   
 
    async function fetchPersonage() {
       try {

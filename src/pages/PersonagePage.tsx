@@ -11,10 +11,9 @@ export function PersonagePage() {
 
    return (
       <div>
-         <ReactPaginate breakLabel='...' nextLabel='>' onPageChange={handlePageClick} pageRangeDisplayed={5} pageCount={pageCount} previousLabel='<' containerClassName='pogination' pageLinkClassName='page-num' previousLinkClassName='page-num' nextLinkClassName='page-num' activeLinkClassName='active' />
          {loading && <Loader />}
          {error && <Error />}
-
+         <ReactPaginate breakLabel='...' nextLabel='>' onPageChange={handlePageClick} pageRangeDisplayed={1} pageCount={pageCount} previousLabel='<' containerClassName='pogination' pageLinkClassName='page-num' previousLinkClassName='page-num' nextLinkClassName='page-num' activeLinkClassName='active' nextClassName='next' previousClassName='previous' />
          {
             <div className={style.wrapper}>
                {personage.map((personage) => (
@@ -22,7 +21,7 @@ export function PersonagePage() {
                ))}
             </div>
          }
-         
+         кнопка скрола на вверх по центру на всю ширину или в правом углу
       </div>
    );
 }

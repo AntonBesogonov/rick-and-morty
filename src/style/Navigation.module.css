@@ -1,13 +1,14 @@
 .nav {
  display: flex;
- justify-content: center;
- padding: 10px;
+ justify-content: space-between;
+ align-items: center;
  text-decoration: none;
- height: 50px;
+ height: 65px;
+ max-width: 1920px;
 }
 
 .link {
- padding: 10px;
+ margin: 10px;
 
 }
 
@@ -21,4 +22,27 @@
 
 a {
  text-decoration: none;
+}
+
+.icon img {
+ width: 50px;
+ height: 50px;
+ justify-content: flex-start;
+
+
+}
+
+.iconWrapper {
+ display: flex;
+ justify-content: flex-end;
+}
+
+.button {
+ display: flex;
+ justify-content: flex-end;
+}
+
+.title {
+ width: 100%;
+ margin: 0 auto;
 }

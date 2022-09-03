@@ -34,5 +34,6 @@ export function MainPage({ personage }: PersonageProps) {
          </div>
          
       </div>
+      
    );
 }

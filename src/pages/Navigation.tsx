@@ -11,7 +11,7 @@ export function Navigation() {
                   <img src={icon} alt='rick and morty' />
                </a>
             </Link>
-            <div className={style.title}>Rick and Morty</div>
+            <div className={style.title}>Rick and Morty characters</div>
          </div>
 
          <div className={style.button}>

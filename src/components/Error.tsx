@@ -1,9 +1,7 @@
+import style from '../style/Error.module.css';
+
 export function Error() {
-   return (
-      <div>
-         <p>тут  полоска 1920px , если ошибка, если нет ошибки, то такая же полоска в цвет фона, чтобы экран не дергался при ошибке</p>
-      </div>
-   );
+   return <div className={style.error}>Try refreshing the page or try again later</div>;
 }
 
 export default Error;

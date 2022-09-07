@@ -1,5 +1,6 @@
 import Error from '../components/Error';
 import Loader from '../components/Loader';
+import NotLoader from '../components/NotLoader';
 import { usePersonage } from '../data/data';
 import { MainPage } from './MainPage';
 import style from '../style/PersonagePage.module.css';
@@ -11,8 +12,9 @@ export function PersonagePage() {
 
    return (
       <div>
-         {loading && <Loader />}
+         {loading ? <Loader /> : <NotLoader />}
          {error && <Error />}
+         
          <ReactPaginate breakLabel='...' nextLabel='>' onPageChange={handlePageClick} pageRangeDisplayed={1} pageCount={pageCount} previousLabel='<' containerClassName='pogination' pageLinkClassName='page-num' previousLinkClassName='page-num' nextLinkClassName='page-num' activeLinkClassName='active' nextClassName='next' previousClassName='previous' />
          {
             <div className={style.wrapper}>

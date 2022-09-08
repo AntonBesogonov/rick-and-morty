@@ -15,7 +15,9 @@ p {
  margin: 0;
 }
 
-
+::-webkit-scrollbar {
+ width: 0;
+}
 
 .photo {
  flex: 2 1 0%;

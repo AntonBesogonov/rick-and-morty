@@ -8,7 +8,7 @@ export function Navigation() {
          <div className={style.iconWrapper}>
             <Link to='/' className={style.icon}>
                <a>
-                  <img src={icon} alt='rick and morty' />
+                  <img src={icon} alt='buy me a coffee' />
                </a>
             </Link>
             <div className={style.title}>Rick and Morty characters</div>

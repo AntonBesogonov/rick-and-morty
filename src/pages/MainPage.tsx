@@ -1,4 +1,3 @@
-import ReactPaginate from 'react-paginate';
 import { IPersonage } from '../models/models';
 import style from '../style/MainPage.module.css';
 

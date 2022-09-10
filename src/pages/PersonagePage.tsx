@@ -12,7 +12,7 @@ export function PersonagePage() {
 
    return (
       <div>
-         {loading ? <Loader /> : <NotLoader />}         
+         {loading ? <Loader /> : <NotLoader />}
          {error ? <Error /> : <ReactPaginate breakLabel='...' nextLabel='>' onPageChange={handlePageClick} pageRangeDisplayed={1} pageCount={pageCount} previousLabel='<' containerClassName='pogination' pageLinkClassName='page-num' previousLinkClassName='page-num' nextLinkClassName='page-num' activeLinkClassName='active' nextClassName='next' previousClassName='previous' />}
          {
             <div className={style.wrapper}>
@@ -21,7 +21,6 @@ export function PersonagePage() {
                ))}
             </div>
          }
-         кнопка скрола на вверх по центру на всю ширину или в правом углу
       </div>
    );
 }

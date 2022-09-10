@@ -1,9 +1,0 @@
-.wrapper {
- display: flex;
- justify-content: center;
- align-items: center;
- flex-wrap: wrap;
- background: rgb(32, 35, 41);
- max-width: 1920px;
-}
-

@@ -17,15 +17,15 @@ export function usePersonage() {
             setError('');
             setLoading(true);
             const response = await axios.get(`https://rickandmortyapi.com/api/character?page=${currentPage}`);
+            setLoading(false);
             setPersonages(response.data.results);
             const totalPage = Math.ceil(Number(response.data.info.count) / 20);
             setPageCount(totalPage);
-            setLoading(false);
          }
       } catch (e: unknown) {
          const error = e as AxiosError;
-         setLoading(false);
          setError(error.message);
+         setLoading(false);
       }
    }
    const handlePageClick = (e: any) => {

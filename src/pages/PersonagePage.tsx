@@ -6,6 +6,7 @@ import { MainPage } from './MainPage';
 import style from '../style/PersonagePage.module.css';
 import ReactPaginate from 'react-paginate';
 import '../style/Pogination.css';
+import ScrollToTop from 'react-scroll-to-top';
 
 export function PersonagePage() {
    const { loading, error, personage, handlePageClick, pageCount } = usePersonage();
@@ -21,6 +22,7 @@ export function PersonagePage() {
                ))}
             </div>
          }
+         <ScrollToTop smooth top={1200} color='rgb(32, 35, 41)' />
       </div>
    );
 }

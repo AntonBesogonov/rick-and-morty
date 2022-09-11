@@ -11,13 +11,15 @@ export function usePersonage() {
 
    async function fetchPersonage() {
       try {
-         setError('');
-         setLoading(true);
-         const response = await axios.get(`https://rickandmortyapi.com/api/character?page=${currentPage}`);
-         setLoading(false);
-         setPersonages(response.data.results);
-         const totalPage = Math.ceil(Number(response.data.info.count) / 20);
-         setPageCount(totalPage);
+         
+            setError('');
+            setLoading(true);
+            const response =  await axios.get(`https://rickandmortyapi.com/api/character?page=${currentPage}`);
+            setPersonages(response.data.results);
+            const totalPage = Math.ceil(Number(response.data.info.count) / 20);
+            setPageCount(totalPage);
+            setLoading(false);
+         
       } catch (e: unknown) {
          const error = e as AxiosError;
          setLoading(false);
@@ -31,7 +33,7 @@ export function usePersonage() {
 
    useEffect(() => {
       fetchPersonage();
-   }, [currentPage]);
+   }, [currentPage, ]);
 
    return { personage, loading, error, handlePageClick, pageCount };
 }

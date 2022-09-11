@@ -7,7 +7,7 @@ export function Navigation() {
       <nav className={style.nav}>
          <div className={style.iconWrapper}>
             <Link to='/' className={style.icon}>
-               <a>
+               <a >
                   <img src={icon} alt='buy me a coffee' />
                </a>
             </Link>

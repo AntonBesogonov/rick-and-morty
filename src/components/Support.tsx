@@ -10,7 +10,7 @@ export function Support() {
          <p>We are not getting any money from this and we use our free time to keep the API running and the data up to date. Every contribution, however big or small, is super valuable for our future.</p>
          <p>Thanks!</p>
          <div className={style.image}>
-            <a target='_blank' href='https://www.buymeacoffee.com/axelfuh'>
+            <a target='_blank' rel="noreferrer" href='https://www.buymeacoffee.com/axelfuh'>
                <img src={iconCoffe} alt='rick and morty' />
             </a>
          </div>

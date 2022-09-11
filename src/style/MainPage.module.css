@@ -9,9 +9,8 @@
  box-shadow: rgb(0 0 0 / 10%) 0px 4px 6px -1px, rgb(0 0 0 / 6%) 0px 2px 4px -1px;
 }
 
-.element:hover {
- color: rgb(250, 171, 0);
- padding: 2px;
+.element:hover { 
+ box-shadow: 0px 0px 17px -4px rgb(255, 174, 0);
 }
 
 p {

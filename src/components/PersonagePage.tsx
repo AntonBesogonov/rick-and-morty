@@ -9,7 +9,7 @@ export function PersonagePage() {
    return (
       <div>         
          {error ? <Error /> : <MapPersonage />}
-         <ScrollToTop smooth top={1200} color='rgb(32, 35, 41)' />
+         <ScrollToTop smooth top={1200} color='rgb(32, 35, 40)' />
       </div>
    );
 }

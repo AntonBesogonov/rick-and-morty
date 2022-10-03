@@ -3,26 +3,27 @@ import style from '../style/Navigation.module.css';
 import icon from '../img/rick_96136.svg';
 
 export function Navigation() {
+   const { nav, iconWrapper, title, button, link, name, styleIcon } = style;
    return (
-      <nav className={style.nav}>
-         <div className={style.iconWrapper}>
-            <Link to='/' className={style.icon}>
-               <a >
+      <nav className={nav}>
+         <div className={iconWrapper}>
+            <Link to='/' className={styleIcon}>
+               <a>
                   <img src={icon} alt='buy me a coffee' />
                </a>
             </Link>
-            <div className={style.title}>Rick and Morty characters</div>
+            <div className={title}>Rick and Morty characters</div>
          </div>
 
-         <div className={style.button}>
-            <div className={style.link}>
-               <Link to='/' className={style.name}>
+         <div className={button}>
+            <div className={link}>
+               <Link to='/' className={name}>
                   HOME
                </Link>
             </div>
 
-            <div className={style.link}>
-               <Link to='/support' className={style.name}>
+            <div className={link}>
+               <Link to='/support' className={name}>
                   SUPPORT
                </Link>
             </div>

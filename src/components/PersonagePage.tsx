@@ -7,10 +7,10 @@ export function PersonagePage() {
    const { error } = usePersonage();
 
    return (
-      <div>         
+      <>         
          {error ? <Error /> : <MapPersonage />}
          <ScrollToTop smooth top={1200} color='rgb(32, 35, 40)' />
-      </div>
+      </>
    );
 }
 

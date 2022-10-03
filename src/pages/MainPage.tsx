@@ -5,34 +5,38 @@ interface PersonageProps {
    personage: IPersonage;
 }
 
+
+
 export function MainPage({ personage }: PersonageProps) {
+   
+   const { name, status, species, image, location, origin } = personage;
+   const { element, photo, data, nameStatus, styleName, lastLocation, styleLocation, from } = style;
+
    return (
-      <div className={style.element}>
-         <div className={style.photo}>{<img src={personage.image} alt={personage.name}></img>}</div>
-         <div className={style.data}>
-            <div className={style.nameStatus}>
-               {<p className={style.name}>{personage.name} </p>}
-               <div className={style.status}>
+      <div className={element}>
+         <div className={photo}>{<img src={image} alt={name}></img>}</div>
+         <div className={data}>
+            <div className={nameStatus}>
+               {<p className={styleName}>{name} </p>}
+               <div className={nameStatus}>
                   {
                      <p>
-                        {personage.status} - {personage.species}
+                        {status} - {species}
                      </p>
                   }{' '}
                </div>
             </div>
 
-            <div className={style.lastLocation}>
-               {<p className={style.location}>Last known location:</p>}
-               {<p>{personage.location?.name}</p>}
+            <div className={lastLocation}>
+               {<p className={styleLocation}>Last known location:</p>}
+               {<p>{location?.name}</p>}
             </div>
 
-            <div className={style.from}>
-               {<p className={style.location}>From:</p>}
-               {<p>{personage.origin?.name} </p>}
+            <div className={from}>
+               {<p className={styleLocation}>From:</p>}
+               {<p>{origin?.name} </p>}
             </div>
          </div>
-         
       </div>
-      
    );
 }
